@@ -1,5 +1,5 @@
 # PES_Assignment_7
-PES Assignment 7: Created by: Shashank Chandrasekaran Decription: Musical Notes implementation using DAC and ADC
+PES Assignment 7: Created by: Shashank Chandrasekaran Description: Musical Notes implementation using DAC and ADC
 
 Following are the .c files created:
 
@@ -15,6 +15,8 @@ PES_Assignment_Musical_Notes.c : Contains the main subroutine that calls the maj
 The DAC portion was tested first for one sine wave. The sample values that were obtained from sine function was plotted in excel and a proper sine wave could be seen. This was the first step that assured the sample values were correct. The next step was to introduce the transition logic, for which systick timer was used for obtaining accurate timing of 1 sec. The approach was such that as systick would check that 1000 msec has elapsed, the tone would be changed immediately. But the problem faced here was that there was clipping at the transitions. To solve this issue, the elapsed time was checked inside the DMA interrupt handler and tone was changed once remaining cycles was completed before beggining new cycles of the next tone. This eliminated the clippings between tones. Since systick timer was used, the transition is very close to 1000 msec.
 Once the DAC was implemented , the ADC was configured and it was checked if the frequency obtained by ADC samples matched the actual frequency.
 Also, the Pin 30 was connected to oscilloscope to check the frequency. It was concluded that the values observed were 444Hz, 592Hz, 666Hz and 888Hz which is within the +- 1.5% offset.
+
+The sine test functions are not included in the project as extra credit was not attempted, the .o file was used for obtaining sine values.
 
 References were taken from Assignment 4 submission for systick and Dean's github link which are mentioned in the source files.
 
