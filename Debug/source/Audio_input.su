@@ -1,0 +1,4 @@
+../source/Audio_input.c:23:6:Init_TPM1	8	static
+../source/Audio_input.c:38:6:Init_ADC0	8	static
+../source/Audio_input.c:59:6:ADC0_samples_buffer	24	static
+../source/Audio_input.c:72:6:ADC0_print_samples	56	static
