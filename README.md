@@ -16,12 +16,20 @@ The DAC portion was tested first for one sine wave. The sample values that were 
 Once the DAC was implemented , the ADC was configured and it was checked if the frequency obtained by ADC samples matched the actual frequency.
 Also, the Pin 30 was connected to oscilloscope to check the frequency. It was concluded that the values observed were 444Hz, 592Hz, 666Hz and 888Hz which is within the +- 1.5% offset.
 
-The sine test functions are not included in the project as extra credit was not attempted, the .o file was used for obtaining sine values.
+The capture of printing on the UART for the 4 tones can be found below:
+
+<img width="331" alt="image" src="https://user-images.githubusercontent.com/112565357/203606334-be126057-a6d3-4ee9-ac22-05364adb53a9.png">
+
+The smooth transition between tones can be found below:
+
+
+
+Note: The sine test functions are not included in the project as extra credit was not attempted, the .o file was used for obtaining sine values.
 
 References were taken from Assignment 4 submission for systick and Dean's github link which are mentioned in the source files.
 
 The screenshots for the 4 tones are added to the main branch. These can be found as 4 .PNG files.
 
-<img width="331" alt="image" src="https://user-images.githubusercontent.com/112565357/203606334-be126057-a6d3-4ee9-ac22-05364adb53a9.png">
+
 
 
