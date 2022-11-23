@@ -84,6 +84,6 @@ void ADC0_print_samples(uint16_t *inp_buff)
 	}
 	//obtain period from autocorrelate function
 	period=autocorrelate_detect_period(inp_buff,BUFF_SIZE,kAC_16bps_unsigned);
-	printf("\rmin=%d max=%d avg=%d period=%d samples frequency=%d Hz\n\n",
+	printf("\rmin=%d max=%d avg=%d period=%d samples frequency=%d Hz\r\n\n",
 			min,max,sum/BUFF_SIZE,period,INPUT_SAMPLE_RATE/period);
 }

@@ -1450,7 +1450,7 @@ END GROUP
                 0x20003000                __top_SRAM = 0x20003000
                 0x20003000                __top_RAM = 0x20003000
 
-.text           0x00000000     0x5314
+.text           0x00000000     0x5318
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(SORT_BY_ALIGNMENT(.isr_vector))
@@ -1460,7 +1460,7 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0x5314 LOADADDR (.data)
+                0x000000c0        0x4 LONG 0x5318 LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x1ffff080 ADDR (.data)
                 0x000000c8        0x4 LONG 0x8 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
@@ -1919,108 +1919,109 @@ END GROUP
                 0x00004f2c                __sys_tmpnam
  *(SORT_BY_ALIGNMENT(.rodata) SORT_BY_ALIGNMENT(.rodata.*) SORT_BY_ALIGNMENT(.constdata) SORT_BY_ALIGNMENT(.constdata.*))
  .rodata.ADC0_print_samples.str1.4
-                0x00004f38       0x3a ./source/Audio_input.o
- *fill*         0x00004f72        0x2 ff
+                0x00004f38       0x3b ./source/Audio_input.o
+ *fill*         0x00004f73        0x1 ff
  .rodata.main.str1.4
-                0x00004f74       0x3c ./source/PES_Assignment_Musical_Notes.o
+                0x00004f74       0x3d ./source/PES_Assignment_Musical_Notes.o
+ *fill*         0x00004fb1        0x3 ff
  .rodata.CLOCK_GetMcgExtClkFreq.str1.4
-                0x00004fb0       0x1e ./drivers/fsl_clock.o
- *fill*         0x00004fce        0x2 ff
+                0x00004fb4       0x1e ./drivers/fsl_clock.o
+ *fill*         0x00004fd2        0x2 ff
  .rodata.CLOCK_GetPll0Freq.str1.4
-                0x00004fd0       0x1d ./drivers/fsl_clock.o
- *fill*         0x00004fed        0x3 ff
+                0x00004fd4       0x1d ./drivers/fsl_clock.o
+ *fill*         0x00004ff1        0x3 ff
  .rodata.CLOCK_EnablePll0.str1.4
-                0x00004ff0       0x19 ./drivers/fsl_clock.o
- *fill*         0x00005009        0x3 ff
+                0x00004ff4       0x19 ./drivers/fsl_clock.o
+ *fill*         0x0000500d        0x3 ff
  .rodata.CLOCK_SetPbeMode.str1.4
-                0x0000500c       0x1a ./drivers/fsl_clock.o
- *fill*         0x00005026        0x2 ff
+                0x00005010       0x1a ./drivers/fsl_clock.o
+ *fill*         0x0000502a        0x2 ff
  .rodata.CLOCK_BootToPeeMode.str1.4
-                0x00005028       0x1a ./drivers/fsl_clock.o
- *fill*         0x00005042        0x2 ff
+                0x0000502c       0x1a ./drivers/fsl_clock.o
+ *fill*         0x00005046        0x2 ff
  .rodata.fllFactorTable.1
-                0x00005044       0x10 ./drivers/fsl_clock.o
+                0x00005048       0x10 ./drivers/fsl_clock.o
  .rodata.LPSCI_GetInstance.str1.4
-                0x00005054       0x36 ./drivers/fsl_lpsci.o
- *fill*         0x0000508a        0x2 ff
+                0x00005058       0x36 ./drivers/fsl_lpsci.o
+ *fill*         0x0000508e        0x2 ff
  .rodata.LPSCI_Init.str1.4
-                0x0000508c       0x43 ./drivers/fsl_lpsci.o
- *fill*         0x000050cf        0x1 ff
+                0x00005090       0x43 ./drivers/fsl_lpsci.o
+ *fill*         0x000050d3        0x1 ff
  .rodata.LPSCI_GetDefaultConfig.str1.4
-                0x000050d0       0x19 ./drivers/fsl_lpsci.o
- *fill*         0x000050e9        0x3 ff
+                0x000050d4       0x19 ./drivers/fsl_lpsci.o
+ *fill*         0x000050ed        0x3 ff
  .rodata.LPSCI_WriteBlocking.str1.4
-                0x000050ec       0x17 ./drivers/fsl_lpsci.o
- *fill*         0x00005103        0x1 ff
+                0x000050f0       0x17 ./drivers/fsl_lpsci.o
+ *fill*         0x00005107        0x1 ff
  .rodata.LPSCI_ReadBlocking.str1.4
-                0x00005104       0x17 ./drivers/fsl_lpsci.o
- *fill*         0x0000511b        0x1 ff
+                0x00005108       0x17 ./drivers/fsl_lpsci.o
+ *fill*         0x0000511f        0x1 ff
  .rodata.s_uartBases
-                0x0000511c        0xc ./drivers/fsl_uart.o
+                0x00005120        0xc ./drivers/fsl_uart.o
  .rodata.s_uartClock
-                0x00005128        0xc ./drivers/fsl_uart.o
+                0x0000512c        0xc ./drivers/fsl_uart.o
  .rodata.UART_GetInstance.str1.4
-                0x00005134       0x2b ./drivers/fsl_uart.o
- *fill*         0x0000515f        0x1 ff
+                0x00005138       0x2b ./drivers/fsl_uart.o
+ *fill*         0x00005163        0x1 ff
  .rodata.UART_Init.str1.4
-                0x00005160       0x3e ./drivers/fsl_uart.o
- *fill*         0x0000519e        0x2 ff
+                0x00005164       0x3e ./drivers/fsl_uart.o
+ *fill*         0x000051a2        0x2 ff
  .rodata.UART_GetDefaultConfig.str1.4
-                0x000051a0       0x18 ./drivers/fsl_uart.o
+                0x000051a4       0x18 ./drivers/fsl_uart.o
  .rodata.UART_ReadBlocking.str1.4
-                0x000051b8       0x16 ./drivers/fsl_uart.o
- *fill*         0x000051ce        0x2 ff
+                0x000051bc       0x16 ./drivers/fsl_uart.o
+ *fill*         0x000051d2        0x2 ff
  .rodata.mcgConfig_BOARD_BootClockRUN
-                0x000051d0        0xa ./board/clock_config.o
-                0x000051d0                mcgConfig_BOARD_BootClockRUN
- *fill*         0x000051da        0x2 ff
+                0x000051d4        0xa ./board/clock_config.o
+                0x000051d4                mcgConfig_BOARD_BootClockRUN
+ *fill*         0x000051de        0x2 ff
  .rodata.simConfig_BOARD_BootClockRUN
-                0x000051dc        0x8 ./board/clock_config.o
-                0x000051dc                simConfig_BOARD_BootClockRUN
+                0x000051e0        0x8 ./board/clock_config.o
+                0x000051e0                simConfig_BOARD_BootClockRUN
  .rodata.oscConfig_BOARD_BootClockRUN
-                0x000051e4        0x8 ./board/clock_config.o
-                0x000051e4                oscConfig_BOARD_BootClockRUN
+                0x000051e8        0x8 ./board/clock_config.o
+                0x000051e8                oscConfig_BOARD_BootClockRUN
  .rodata.sin_lookup
-                0x000051ec       0x42 C:/Users/Shashank C/Documents/MCUXpressoIDE_11.6.0_8187/workspace/PES_7/source/fp_trig.o
- *fill*         0x0000522e        0x2 ff
+                0x000051f0       0x42 C:/Users/Shashank C/Documents/MCUXpressoIDE_11.6.0_8187/workspace/PES_7/source/fp_trig.o
+ *fill*         0x00005232        0x2 ff
  .rodata.fp_sin.str1.4
-                0x00005230       0x4a C:/Users/Shashank C/Documents/MCUXpressoIDE_11.6.0_8187/workspace/PES_7/source/fp_trig.o
- *fill*         0x0000527a        0x2 ff
+                0x00005234       0x4a C:/Users/Shashank C/Documents/MCUXpressoIDE_11.6.0_8187/workspace/PES_7/source/fp_trig.o
+ *fill*         0x0000527e        0x2 ff
  .rodata.__num_Ciob_streams
-                0x0000527c        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_semihost_nf.a(__ciob.o)
-                0x0000527c                __num_Ciob_streams
+                0x00005280        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_semihost_nf.a(__ciob.o)
+                0x00005280                __num_Ciob_streams
  .rodata.__assertion_failed.str1.1
-                0x00005280       0x15 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_semihost_nf.a(_cr_assert.o)
+                0x00005284       0x15 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_semihost_nf.a(_cr_assert.o)
  .rodata._Csys_alloc.str1.1
-                0x00005295       0x18 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(alloc.o)
+                0x00005299       0x18 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(alloc.o)
  .rodata.fp_display.str1.1
-                0x000052ad       0x32 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(fpprintf.o)
+                0x000052b1       0x32 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(fpprintf.o)
                                  0x35 (size before relaxing)
  .rodata._initio.str1.1
-                0x000052df        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(initio.o)
+                0x000052e3        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(initio.o)
  .rodata.__vfprintf.str1.1
-                0x000052e3       0x31 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(printf.o)
+                0x000052e7       0x31 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(printf.o)
                                  0x38 (size before relaxing)
-                0x00005314                . = ALIGN (0x4)
-                0x00005314                _etext = .
+                0x00005318                . = ALIGN (0x4)
+                0x00005318                _etext = .
 
-.glue_7         0x00005314        0x0
- .glue_7        0x00005314        0x0 linker stubs
+.glue_7         0x00005318        0x0
+ .glue_7        0x00005318        0x0 linker stubs
 
-.glue_7t        0x00005314        0x0
- .glue_7t       0x00005314        0x0 linker stubs
+.glue_7t        0x00005318        0x0
+ .glue_7t       0x00005318        0x0 linker stubs
 
-.vfp11_veneer   0x00005314        0x0
- .vfp11_veneer  0x00005314        0x0 linker stubs
+.vfp11_veneer   0x00005318        0x0
+ .vfp11_veneer  0x00005318        0x0 linker stubs
 
-.v4_bx          0x00005314        0x0
- .v4_bx         0x00005314        0x0 linker stubs
+.v4_bx          0x00005318        0x0
+ .v4_bx         0x00005318        0x0 linker stubs
 
-.iplt           0x00005314        0x0
- .iplt          0x00005314        0x0 ./utilities/fsl_debug_console.o
+.iplt           0x00005318        0x0
+ .iplt          0x00005318        0x0 ./utilities/fsl_debug_console.o
 
-.rel.dyn        0x00005314        0x0
- .rel.iplt      0x00005314        0x0 ./utilities/fsl_debug_console.o
+.rel.dyn        0x00005318        0x0
+ .rel.iplt      0x00005318        0x0 ./utilities/fsl_debug_console.o
 
 .m_usb_data
  *(SORT_BY_ALIGNMENT(m_usb_bdt))
@@ -2038,7 +2039,7 @@ END GROUP
                 0x1ffff080                . = ALIGN (0x4)
                 0x1ffff080                _end_uninit_RESERVED = .
 
-.data           0x1ffff080        0x8 load address 0x00005314
+.data           0x1ffff080        0x8 load address 0x00005318
  FILL mask 0xff
                 0x1ffff080                _data = .
                 [!provide]                PROVIDE (__start_data_RAM = .)
@@ -2059,7 +2060,7 @@ END GROUP
                 [!provide]                PROVIDE (__end_data_RAM = .)
                 [!provide]                PROVIDE (__end_data_SRAM = .)
 
-.igot.plt       0x1ffff088        0x0 load address 0x0000531c
+.igot.plt       0x1ffff088        0x0 load address 0x00005320
  .igot.plt      0x1ffff088        0x0 ./utilities/fsl_debug_console.o
 
 .bss            0x1ffff088     0x2140
@@ -2126,10 +2127,10 @@ END GROUP
 .ARM.extab
  *(SORT_BY_ALIGNMENT(.ARM.extab*) SORT_BY_ALIGNMENT(.gnu.linkonce.armextab.*))
 
-.ARM.exidx      0x0000531c        0x0
-                0x0000531c                __exidx_start = .
+.ARM.exidx      0x00005320        0x0
+                0x00005320                __exidx_start = .
  *(SORT_BY_ALIGNMENT(.ARM.exidx*) SORT_BY_ALIGNMENT(.gnu.linkonce.armexidx.*))
-                0x0000531c                __exidx_end = .
+                0x00005320                __exidx_end = .
                 0x00000400                _HeapSize = 0x400
 
 .heap           0x200011c8      0x400
@@ -2150,8 +2151,8 @@ END GROUP
                 0x20002c00                . = ALIGN (0x4)
                 0x20003000                _vStackTop = (. + _StackSize)
                 0x00000000                _image_start = LOADADDR (.text)
-                0x0000531c                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x0000531c                _image_size = (_image_end - _image_start)
+                0x00005320                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x00005320                _image_size = (_image_end - _image_start)
 OUTPUT(PES_7.axf elf32-littlearm)
 LOAD linker stubs
 

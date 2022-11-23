@@ -65,7 +65,7 @@ int main(void)
 	Init_TPM1();
 	Init_ADC0();
 	Copy_buffer_DMA0(&tones[0]); //Copy contents of tone 0
-	printf("\rGenerated %d samples at %d Hz; computed period=%d samples\n",
+	printf("\rGenerated %d samples at %d Hz; computed period=%d samples\r\n",
 			tones[0].total_samples,tones[0].frequency,tones[0].samples_period);
 	Init_SysTick();
 	TPM0->SC |= TPM_SC_CMOD(1); //Start TPM0
@@ -81,7 +81,7 @@ int main(void)
 			reset_timer(); //Reset timer
 			Start_DMA0(); //Start DMA again
 			ADC0_samples_buffer(&receive_buffer[0]); //Sample the analog output
-			printf("\rGenerated %d samples at %d Hz; computed period=%d samples\n",
+			printf("\rGenerated %d samples at %d Hz; computed period=%d samples\r\n",
 					tones[tone_track].total_samples,tones[tone_track].frequency,tones[tone_track].samples_period);
 			ADC0_print_samples(&receive_buffer[0]);
 		}
