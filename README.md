@@ -21,3 +21,7 @@ The sine test functions are not included in the project as extra credit was not 
 References were taken from Assignment 4 submission for systick and Dean's github link which are mentioned in the source files.
 
 The screenshots for the 4 tones are added to the main branch. These can be found as 4 .PNG files.
+
+<img width="331" alt="image" src="https://user-images.githubusercontent.com/112565357/203606334-be126057-a6d3-4ee9-ac22-05364adb53a9.png">
+
+
