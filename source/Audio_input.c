@@ -47,7 +47,7 @@ void Init_ADC0(void)
 	//Disabled Compare function, DMA disabled, default reference voltage
 	ADC0->SC2 = ADC_SC2_ADTRG(1) | ADC_SC2_ACFE(0) | ADC_SC2_DMAEN(0) | ADC_SC2_REFSEL(0);
 
-	//ADC0 interrupt disabled, Single ended conversion 10111 When DIFF=0, AD23 is selected as input for ADC
+	//ADC0 interrupt disabled, Single ended conversion 10111 When DIFF=0, AD23 is selected as input for ADC0
 	ADC0->SC1[0] = ADC_SC1_AIEN(0) | ADC_SC1_DIFF(0) | ADC_SC1_ADCH(INPUT_CHANNEL_SEL);
 
 	//Select TPM1 overflow trigger for ADC0
